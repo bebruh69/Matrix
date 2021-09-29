@@ -170,3 +170,16 @@ Matrix& Matrix::Tran ()
 
     return temp;
     }
+
+Matrix& Matrix::random (int first_value, int last_value)
+    {
+    Matrix temp (size_y_, size_x_);
+
+    for (int y = 0; y < size_y_; y++)
+        for (int x = 0; x < size_x_; x++)
+            temp.matrix_[x][y] = first_value + rand() % last_value;
+
+    *this = temp;
+
+    return temp;
+    }

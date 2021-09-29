@@ -5,6 +5,7 @@
 #pragma once
 #include <initializer_list>
 #include <ostream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -23,6 +24,7 @@ class Matrix
         ~Matrix ();
 
         Matrix& Tran ();
+        Matrix& random (int first_value, int last_value);
         //bool is_right_step();
         //bool is_left_step();
 
