@@ -124,3 +124,13 @@ Matrix operator+ (const Matrix &lhs, const Matrix &rhs)
             temp.matrix_[y][x] += rhs.matrix_[y][x];
     return temp;
     }
+
+Matrix operator- (const Matrix &lhs, const Matrix &rhs)
+    {
+    Matrix temp (lhs.size_x_, lhs.size_y_);
+
+    for (int y = 0; y < lhs.size_y_; y++)
+        for (int x = 0; x < lhs.size_x_; x++)
+            temp.matrix_[y][x] -= rhs.matrix_[y][x];
+    return temp;
+    }
