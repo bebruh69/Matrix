@@ -50,3 +50,15 @@ Matrix::Matrix (int size_x, int size_y)
         for (int x = 0; x < size_x_; x++)
             matrix_[y][x] = 0;
     }
+
+Matrix::Matrix ()
+    {
+    size_x_ = 0;
+    size_y_ = 0;
+
+    matrix_ = new int*[1];
+    for (int i = 0; i < 1; i++)
+        matrix_[i] = new int [1];
+
+    matrix_[0][0] = 0;
+    }
