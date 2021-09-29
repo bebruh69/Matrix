@@ -15,9 +15,9 @@ class Matrix
         int size_x_, size_y_;
         int** matrix_;
 
-        //Matrix (int size_x, int size_y, initializer_list<initializer_list<int>> matrix);
-        //Matrix (int size_x, int size_y, int** matrix);
-        //Matrix (int size_x, int size_y);
+        Matrix (int size_x, int size_y, initializer_list<initializer_list<int>> matrix);
+        Matrix (int size_x, int size_y, int** matrix);
+        Matrix (int size_x, int size_y);
         //Matrix ();
         //Matrix (const Matrix &matrix1);
         //~Matrix ();
