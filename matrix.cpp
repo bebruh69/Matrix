@@ -134,3 +134,26 @@ Matrix operator- (const Matrix &lhs, const Matrix &rhs)
             temp.matrix_[y][x] -= rhs.matrix_[y][x];
     return temp;
     }
+
+Matrix operator* (const Matrix &lhs, const Matrix &rhs)
+    {
+    Matrix temp (rhs.size_x_, lhs.size_y_);
+
+    for (int y = 0; y < lhs.size_y_; y++)
+        for (int x = 0; x < rhs.size_x_; x++)
+            for (int k = 0; k < lhs.size_x_; k++)
+                temp.matrix_[y][x] += lhs.matrix_[y][k] * rhs.matrix_[k][x];
+
+    return temp;
+    }
+
+Matrix operator* (const Matrix &lhs, const int rhs)
+    {
+    Matrix temp (lhs);
+
+    for (int y = 0; y < lhs.size_y_; y++)
+        for (int x = 0; x < lhs.size_x_; x++)
+            temp.matrix_[y][x] *= rhs;
+
+    return temp;
+    }
