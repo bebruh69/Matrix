@@ -28,11 +28,11 @@ class Matrix
 
         Matrix& operator= (const Matrix &matrix);
 
-        //friend Matrix operator+ (const Matrix &lhs, const Matrix &rhs);
+        friend Matrix operator+ (const Matrix &lhs, const Matrix &rhs);
         //friend Matrix operator- (const Matrix &lhs, const Matrix &rhs);
         //friend Matrix operator* (const Matrix &lhs, const Matrix &rhs);
         //friend Matrix operator* (const Matrix &lhs, const int rhs);
-        //friend ostream& operator<< (ostream &out, const Matrix &matrix);
+        friend ostream& operator<< (ostream &out, const Matrix &matrix);
 
 
     };

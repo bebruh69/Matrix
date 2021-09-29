@@ -101,3 +101,16 @@ Matrix& Matrix::operator= (const Matrix &matrix)
 
     return *this;
     }
+
+ostream& operator<< (ostream &out, const Matrix &matrix)
+    {
+    for (int y = 0; y < matrix.size_y_; y++)
+        {
+        out << "|";
+        for (int x = 0; x < matrix.size_x_ - 1; x++)
+            out << matrix.matrix_[y][x] << " ";
+        out << matrix.matrix_[y][matrix.size_x_ - 1] << "|" << '\n';
+        }
+
+    return out;
+    }
