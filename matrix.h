@@ -19,8 +19,8 @@ class Matrix
         Matrix (int size_x, int size_y, int** matrix);
         Matrix (int size_x, int size_y);
         Matrix ();
-        //Matrix (const Matrix &matrix1);
-        //~Matrix ();
+        Matrix (const Matrix &matrix1);
+        ~Matrix ();
 
         //Matrix& Tran ();
         //bool is_right_step();

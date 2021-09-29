@@ -76,3 +76,9 @@ Matrix::Matrix (const Matrix &matrix1)
         for (int x = 0; x < size_x_; x++)
             matrix_[y][x] = matrix1.matrix_[y][x];
     }
+
+Matrix::~Matrix ()
+    {
+    for (int i = 0; i < size_y_; i++)
+        delete[] matrix_[i];
+    }
