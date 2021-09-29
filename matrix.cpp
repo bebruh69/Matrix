@@ -157,3 +157,16 @@ Matrix operator* (const Matrix &lhs, const int rhs)
 
     return temp;
     }
+
+Matrix& Matrix::Tran ()
+    {
+    Matrix temp (size_y_, size_x_);
+
+    for (int y = 0; y < size_y_; y++)
+        for (int x = 0; x < size_x_; x++)
+            temp.matrix_[x][y] = matrix_[y][x];
+
+    *this = temp;
+
+    return temp;
+    }

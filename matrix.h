@@ -22,7 +22,7 @@ class Matrix
         Matrix (const Matrix &matrix1);
         ~Matrix ();
 
-        //Matrix& Tran ();
+        Matrix& Tran ();
         //bool is_right_step();
         //bool is_left_step();
 
