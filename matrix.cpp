@@ -62,3 +62,17 @@ Matrix::Matrix ()
 
     matrix_[0][0] = 0;
     }
+
+Matrix::Matrix (const Matrix &matrix1)
+    {
+    size_x_ = matrix1.size_x_;
+    size_y_ = matrix1.size_y_;
+
+    matrix_ = new int*[size_y_];
+    for (int i = 0; i < size_y_; i++)
+        matrix_[i] = new int [size_x_];
+
+    for (int y = 0; y < size_y_; y++)
+        for (int x = 0; x < size_x_; x++)
+            matrix_[y][x] = matrix1.matrix_[y][x];
+    }
