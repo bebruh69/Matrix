@@ -177,7 +177,7 @@ Matrix& Matrix::random (int first_value, int last_value)
 
     for (int y = 0; y < size_y_; y++)
         for (int x = 0; x < size_x_; x++)
-            temp.matrix_[x][y] = first_value + rand() % last_value;
+            temp.matrix_[x][y] = first_value + rand() % (last_value + 1);
 
     *this = temp;
 

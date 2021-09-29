@@ -1,17 +1,14 @@
 #include <iostream>
+#include <cstdlib>
+#include <matrix.h>
+
 
 using namespace std;
 
-class Matrix
-{
-    int num_of_lines;
-    int num_of_columns;
-public:
-    Matrix(int num_)
-};
-
 int main()
 {
-    \
+    Matrix test(10, 10);
+    test.random(0, 1);
+    cout << test;
     return 0;
 }
