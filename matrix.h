@@ -26,7 +26,7 @@ class Matrix
         //bool is_right_step();
         //bool is_left_step();
 
-        //Matrix& operator= (const Matrix &matrix);
+        Matrix& operator= (const Matrix &matrix);
 
         //friend Matrix operator+ (const Matrix &lhs, const Matrix &rhs);
         //friend Matrix operator- (const Matrix &lhs, const Matrix &rhs);

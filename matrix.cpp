@@ -82,3 +82,22 @@ Matrix::~Matrix ()
     for (int i = 0; i < size_y_; i++)
         delete[] matrix_[i];
     }
+
+Matrix& Matrix::operator= (const Matrix &matrix)
+    {
+    this->~Matrix();
+
+    size_x_ = matrix.size_x_;
+    size_y_ = matrix.size_y_;
+
+    matrix_ = new int*[size_y_];
+    for (int i = 0; i < size_y_; i++)
+        matrix_[i] = new int [size_x_];
+
+
+    for (int y = 0; y < size_y_; y++)
+        for (int x = 0; x < size_x_; x++)
+            matrix_[y][x] = matrix.matrix_[y][x];
+
+    return *this;
+    }
